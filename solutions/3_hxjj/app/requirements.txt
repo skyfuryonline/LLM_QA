@@ -1,9 +1,0 @@
-transformers
-langchain
-peft
-rank_bm25
-jsonlines
-tiktoken
-transformers_stream_generator
-modelscope
-pdfplumber
