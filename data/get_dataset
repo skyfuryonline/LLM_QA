@@ -1,0 +1,15 @@
+# 要求安装 git lfs
+
+git clone https://www.modelscope.cn/datasets/BJQW14B/bs_challenge_financial_14b_dataset.git
+
+# 读取问题文件
+
+import jsonlines
+def read_jsonl(path):
+    content = []
+    with jsonlines.open(path, "r") as json_file:
+        for obj in json_file.iter(type=dict, skip_invalid=True):
+            content.append(obj)
+    return content
+
+question = read_jsonl('./question.json')
